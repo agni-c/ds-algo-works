@@ -42,21 +42,32 @@
 
 # Example Fizz Buzz function
 
-def FizzBuzzFn(limit,firstNo,secondNo):
-    for i in range(int(limit)):
-        firstCond = i % firstNo == 0
-        secondCond = i % secondNo == 0
+# def FizzBuzzFn(limit,firstNo,secondNo):
+#     for i in range(int(limit)):
+#         firstCond = i % firstNo == 0
+#         secondCond = i % secondNo == 0
 
-        if i==0:
-            print(0)
-        elif firstCond and secondCond :
-            print("FizzBuzz")
-        elif firstCond:
-            print("Fizz")
-        elif secondCond:
-            print("Buzz")
-        else:
-            print(i)
+#         if i==0:
+#             print(0)
+#         elif firstCond and secondCond :
+#             print("FizzBuzz")
+#         elif firstCond:
+#             print("Fizz")
+#         elif secondCond:
+#             print("Buzz")
+#         else:
+#             print(i)
 
-FizzBuzzFn(150,7,6)
+# FizzBuzzFn(150,7,6)
+
+
+
+from typing import List
+
+
+
+
+
+
+
 
