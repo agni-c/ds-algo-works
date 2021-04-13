@@ -1,0 +1,31 @@
+
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        rowStart=0
+        rowEnd=len(matrix)
+        colStart=0
+        colEnd=len(matrix[0])
+        res=[]
+        
+        while rowStart < rowEnd and colStart < colEnd:
+            
+            for i in range(colStart,colEnd):
+                res.append(matrix[rowStart][i])
+            rowStart+=1
+            
+            for i in range(rowStart,rowEnd):
+                res.append(matrix[i][colEnd-1])
+            colEnd-=1
+            
+            if rowStart < rowEnd: # at least 1 row should remain to triverse it
+                for i in range(colEnd-1,colStart-1,-1):
+                    res.append(matrix[rowEnd-1][i])
+            rowEnd-=1
+                
+            if colStart < colEnd: # at least 1 col ele should remain triverse the row
+                for i in range(rowEnd-1,rowStart-1,-1):
+                    res.append(matrix[i][colStart])
+                    
+            colStart+=1
+            
+        return res
